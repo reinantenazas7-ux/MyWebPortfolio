@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Reinan Joseph T. Tenazas | IT Portfolio</title>
+
+	<style>
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			scroll-behavior: smooth;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		body {
+			background: #0f172a;
+			color: #e2e8f0;
+			line-height: 1.6;
+		}
+
+
+		/* ================= NAVIGATION ================= */
+
+		nav {
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			background: rgba(15, 23, 42, 0.95);
+			padding: 18px 8%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid #1e293b;
+		}
+
+		.logo {
+			color: #38bdf8;
+			font-size: 1.4rem;
+			font-weight: bold;
+		}
+
+		nav ul {
+			display: flex;
+			list-style: none;
+			gap: 25px;
+		}
+
+		nav a {
+			color: #cbd5e1;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+
+		nav a:hover {
+			color: #38bdf8;
+		}
+
+
+		/* ================= HERO ================= */
+
+		.hero {
+			min-height: 90vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 50px 20px;
+
+			background:
+				linear-gradient(
+					rgba(15, 23, 42, 0.8),
+					rgba(15, 23, 42, 0.95)
+				),
+				url("images/background.jpg") center/cover;
+		}
+
+		.hero-content {
+			max-width: 900px;
+		}
+
+		.hero h1 {
+			font-size: 4rem;
+			color: white;
+			margin-bottom: 10px;
+		}
+
+		.hero h1 span {
+			color: #38bdf8;
+		}
+
+		.hero h2 {
+			color: #94a3b8;
+			font-size: 1.5rem;
+			margin-bottom: 20px;
+		}
+
+		.hero p {
+			max-width: 700px;
+			margin: auto;
+			color: #cbd5e1;
+			font-size: 1.1rem;
+		}
+
+		.buttons {
+			margin-top: 30px;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 12px 25px;
+			margin: 5px;
+			border-radius: 8px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+
+		.btn-primary {
+			background: #38bdf8;
+			color: #0f172a;
+		}
+
+		.btn-primary:hover {
+			transform: translateY(-3px);
+			background: #7dd3fc;
+		}
+
+		.btn-outline {
+			border: 1px solid #38bdf8;
+			color: #38bdf8;
+		}
+
+		.btn-outline:hover {
+			background: #38bdf8;
+			color: #0f172a;
+		}
+
+
+		/* ================= GENERAL ================= */
+
+		section {
+			padding: 80px 8%;
+			max-width: 1200px;
+			margin: auto;
+		}
+
+		.section-title {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.section-title h2 {
+			font-size: 2.5rem;
+			color: white;
+		}
+
+		.section-title p {
+			color: #94a3b8;
+		}
+
+
+		/* ================= ABOUT ================= */
+
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 40px;
+			align-items: center;
+		}
+
+		.profile-image {
+			text-align: center;
+		}
+
+		.profile-image img {
+			width: 250px;
+			height: 250px;
+			object-fit: cover;
+			border-radius: 50%;
+			border: 4px solid #38bdf8;
+			box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+		}
+
+		.about-text h3 {
+			color: #38bdf8;
+			font-size: 1.5rem;
+			margin-bottom: 15px;
+		}
+
+		.about-text p {
+			color: #cbd5e1;
+			margin-bottom: 15px;
+		}
+
+
+		/* ================= SKILLS ================= */
+
+		.skills-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px;
+		}
+
+		.skill-card {
+			background: #1e293b;
+			padding: 25px;
+			border-radius: 12px;
+			text-align: center;
+			border: 1px solid #334155;
+			transition: 0.3s;
+		}
+
+		.skill-card:hover {
+			transform: translateY(-8px);
+			border-color: #38bdf8;
+		}
+
+		.skill-icon {
+			font-size: 2.5rem;
+			margin-bottom: 10px;
+		}
+
+		.skill-card h3 {
+			color: white;
+			margin-bottom: 5px;
+		}
+
+		.skill-card p {
+			color: #94a3b8;
+			font-size: 0.9rem;
+		}
+
+
+		/* ================= PROJECTS ================= */
+
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+		}
+
+		.project-card {
+			background: #1e293b;
+			border-radius: 12px;
+			overflow: hidden;
+			border: 1px solid #334155;
+			transition: 0.3s;
+		}
+
+		.project-card:hover {
+			transform: translateY(-8px);
+			border-color: #38bdf8;
+		}
+
+		.project-card img {
+			width: 100%;
+			height: 230px;
+			object-fit: cover;
+			background: #020617;
+
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.project-card img:hover {
+			opacity: 0.8;
+		}
+
+		.project-content {
+			padding: 25px;
+		}
+
+		.project-content h3 {
+			color: #38bdf8;
+			margin-bottom: 10px;
+		}
+
+		.project-content p {
+			color: #cbd5e1;
+			margin-bottom: 15px;
+		}
+
+		.tech {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		.tech span {
+			background: #0f172a;
+			color: #7dd3fc;
+			padding: 5px 10px;
+			border-radius: 5px;
+			font-size: 0.8rem;
+		}
+
+		.image-hint {
+			color: #64748b;
+			font-size: 0.75rem;
+			margin-top: 12px;
+		}
+
+
+		/* ================= EXPERIENCE ================= */
+
+		.experience {
+			background: #1e293b;
+			padding: 30px;
+			border-radius: 12px;
+			border-left: 4px solid #38bdf8;
+		}
+
+		.experience h3 {
+			color: #38bdf8;
+		}
+
+		.experience h4 {
+			color: white;
+			margin: 5px 0 15px;
+		}
+
+		.experience ul {
+			padding-left: 20px;
+			color: #cbd5e1;
+		}
+
+		.experience li {
+			margin-bottom: 8px;
+		}
+
+
+		/* ================= OJT COMPLETION CERTIFICATE ================= */
+
+		.experience > img {
+			width: 100%;
+			max-width: 650px;
+			max-height: 450px;
+			height: auto;
+			object-fit: contain;
+			display: block;
+			margin: 20px auto 0;
+
+			border-radius: 10px;
+			border: 2px solid #334155;
+
+			background: #020617;
+
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.experience > img:hover {
+			transform: scale(1.02);
+			border-color: #38bdf8;
+			opacity: 0.9;
+		}
+
+
+		/* ================= OJT GALLERY ================= */
+
+		.ojt-gallery {
+			margin-top: 40px;
+			padding: 0 8% 80px;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.ojt-gallery h3 {
+			text-align: center;
+			color: #38bdf8;
+			margin-bottom: 25px;
+			font-size: 1.5rem;
+		}
+
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+		}
+
+		.gallery-item {
+			background: #0f172a;
+			border-radius: 10px;
+			overflow: hidden;
+			border: 1px solid #334155;
+			transition: 0.3s;
+		}
+
+		.gallery-item:hover {
+			transform: translateY(-5px);
+			border-color: #38bdf8;
+		}
+
+		.gallery-item img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			display: block;
+
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.gallery-item img:hover {
+			opacity: 0.8;
+		}
+
+		.gallery-caption {
+			padding: 12px;
+			text-align: center;
+			color: #cbd5e1;
+			font-size: 0.9rem;
+		}
+
+
+		/* ================= IMAGE VIEWER ================= */
+
+		.image-viewer {
+			display: none;
+
+			position: fixed;
+			z-index: 2000;
+
+			left: 0;
+			top: 0;
+
+			width: 100%;
+			height: 100%;
+
+			background: rgba(0, 0, 0, 0.92);
+
+			justify-content: center;
+			align-items: center;
+
+			padding: 30px;
+
+			animation: fadeIn 0.25s ease;
+		}
+
+		.image-viewer img {
+			max-width: 90%;
+			max-height: 85%;
+
+			object-fit: contain;
+
+			border-radius: 10px;
+
+			box-shadow:
+				0 0 40px rgba(255, 255, 255, 0.15);
+		}
+
+		.close-image {
+			position: absolute;
+
+			top: 15px;
+			right: 30px;
+
+			color: white;
+
+			font-size: 50px;
+			font-weight: bold;
+
+			cursor: pointer;
+
+			transition: 0.3s;
+
+			line-height: 1;
+		}
+
+		.close-image:hover {
+			color: #38bdf8;
+			transform: scale(1.1);
+		}
+
+		.viewer-text {
+			position: absolute;
+
+			bottom: 20px;
+
+			color: #cbd5e1;
+
+			font-size: 0.9rem;
+
+			text-align: center;
+		}
+
+		@keyframes fadeIn {
+
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+
+		}
+
+
+		/* ================= CONTACT ================= */
+
+		.contact-box {
+			text-align: center;
+			background: #1e293b;
+			padding: 40px;
+			border-radius: 12px;
+			border: 1px solid #334155;
+		}
+
+		.contact-box p {
+			color: #cbd5e1;
+			margin: 10px;
+		}
+
+		.contact-box a {
+			color: #38bdf8;
+			text-decoration: none;
+		}
+
+		.contact-box a:hover {
+			text-decoration: underline;
+		}
+
+
+		/* ================= FOOTER ================= */
+
+		footer {
+			text-align: center;
+			background: #020617;
+			padding: 25px;
+			color: #64748b;
+		}
+
+
+		/* ================= RESPONSIVE ================= */
+
+		@media (max-width: 900px) {
+
+			.hero h1 {
+				font-size: 3rem;
+			}
+
+			.skills-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.about {
+				grid-template-columns: 1fr;
+				text-align: center;
+			}
+
+			.projects-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.gallery-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+		}
+
+
+		@media (max-width: 600px) {
+
+			nav {
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			nav ul {
+				gap: 12px;
+				font-size: 0.9rem;
+			}
+
+			.hero h1 {
+				font-size: 2.3rem;
+			}
+
+			.hero h2 {
+				font-size: 1.2rem;
+			}
+
+			.skills-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.projects-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.gallery-grid {
+				grid-template-columns: 1fr;
+			}
+
+			section {
+				padding: 60px 5%;
+			}
+
+			.ojt-gallery {
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+
+			/* Certificate on mobile */
+
+			.experience > img {
+				max-width: 100%;
+				max-height: 400px;
+			}
+
+			.image-viewer {
+				padding: 15px;
+			}
+
+			.image-viewer img {
+				max-width: 95%;
+				max-height: 80%;
+			}
+
+			.close-image {
+				top: 10px;
+				right: 20px;
+				font-size: 40px;
+			}
+
+		}
+
+
+		/* ================= CERTIFICATE SECTION ================= */
+
+		.certificate-section {
+			margin-top: 40px;
+			background: #1e293b;
+			padding: 30px;
+			border-radius: 12px;
+			border: 1px solid #334155;
+			text-align: center;
+		}
+
+		.certificate-section h3 {
+			color: #38bdf8;
+			font-size: 1.5rem;
+			margin-bottom: 8px;
+		}
+
+		.certificate-section p {
+			color: #cbd5e1;
+			margin-bottom: 20px;
+		}
+
+		.certificate-section img {
+			width: 100%;
+			max-width: 650px;
+			max-height: 450px;
+			object-fit: contain;
+			border-radius: 5px;
+			border: 2px solid #334155;
+			cursor: pointer;
+			transition: 0.3s;
+			background: #020617;
+		}
+
+		.certificate-section img:hover {
+			transform: scale(1.02);
+			border-color: #38bdf8;
+			opacity: 0.9;
+		}
+
+		.certificate-section .image-hint {
+			color: #64748b;
+			font-size: 0.8rem;
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+
+	<!-- ================= NAVIGATION ================= -->
+
+	<nav>
+
+		<div class="logo">
+			My Personal Portfolio
+		</div>
+
+		<ul>
+
+			<li>
+				<a href="#about">About</a>
+			</li>
+
+			<li>
+				<a href="#skills">Skills</a>
+			</li>
+
+			<li>
+				<a href="#projects">Projects</a>
+			</li>
+
+			<li>
+				<a href="#experience">Experience</a>
+			</li>
+
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+
+		</ul>
+
+	</nav>
+
+
+	<!-- ================= HERO ================= -->
+
+	<header class="hero">
+
+		<div class="hero-content">
+
+			<h1>
+				Hello, I'm
+				<span>Reinan Joseph</span>
+			</h1>
+
+			<h2>
+				IT Graduate | System and Web Developer | C# .NET Developer
+			</h2>
+
+			<p>
+				A Bachelor of Science in Information Technology graduate
+				passionate about software development, game development,
+				troubleshooting, and building practical technology solutions.
+			</p>
+
+			<div class="buttons">
+
+				<a href="#projects" class="btn btn-primary">
+					View My Projects
+				</a>
+
+				<a href="#contact" class="btn btn-outline">
+					Contact Me
+				</a>
+
+			</div>
+
+		</div>
+
+	</header>
+
+
+	<!-- ================= ABOUT ================= -->
+
+	<section id="about">
+
+		<div class="section-title">
+
+			<h2>
+				About Me
+			</h2>
+
+			<p>
+				Get to know me and my background
+			</p>
+
+		</div>
+
+
+		<div class="about">
+
+
+			<div class="profile-image">
+
+				<img src="RJT.JPG"
+					alt="Reinan Joseph Tenazas">
+
+			</div>
+
+
+			<div class="about-text">
+
+				<h3>
+					IT Graduate & Aspiring Developer
+				</h3>
+
+				<p>
+					I'm Reinan Joseph T. Tenazas, a Bachelor of Science in
+					Information Technology graduate from STI College Kalibo.
+				</p>
+
+				<p>
+					I have experience working with web technologies,
+					Unity game development, C# programming,
+					and technical troubleshooting.
+				</p>
+
+				<p>
+					During my On-the-Job Training, I worked with the
+					Planning Section ICT Unit where I gained practical
+					experience in computer setup, troubleshooting,
+					database encoding, printer support, system installation,
+					and other IT-related tasks.
+				</p>
+
+				<p>
+					I am continuously improving my programming skills and
+					looking for opportunities where I can learn, contribute,
+					and grow as an IT professional.
+				</p>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<!-- ================= SKILLS ================= -->
+
+	<section id="skills">
+
+		<div class="section-title">
+
+			<h2>
+				My Skills
+			</h2>
+
+			<p>
+				Technologies and technical skills I have developed
+			</p>
+
+		</div>
+
+
+		<div class="skills-grid">
+
+
+			<div class="skill-card">
+
+				<div class="skill-icon">
+					💻
+				</div>
+
+				<h3>
+					C# / .NET
+				</h3>
+
+				<p>
+					Application development and object-oriented programming.
+				</p>
+
+			</div>
+
+
+			<div class="skill-card">
+
+				<div class="skill-icon">
+					🌐
+				</div>
+
+				<h3>
+					HTML / CSS
+				</h3>
+
+				<p>
+					Creating responsive and user-friendly websites.
+				</p>
+
+			</div>
+
+
+			<div class="skill-card">
+
+				<div class="skill-icon">
+					⚡
+				</div>
+
+				<h3>
+					JavaScript
+				</h3>
+
+				<p>
+					Adding functionality and interactivity to websites.
+				</p>
+
+			</div>
+
+
+			<div class="skill-card">
+
+				<div class="skill-icon">
+					🎮
+				</div>
+
+				<h3>
+					Unity
+				</h3>
+
+				<p>
+					2D game development using Unity and C#.
+				</p>
+
+			</div>
+
+
+			<div class="skill-card">
+
+				<div class="skill-icon">
+					🔧
+				</div>
+
+				<h3>
+					IT Support
+				</h3>
+
+				<p>
+					Computer setup, troubleshooting, installation,
+					and maintenance.
+				</p>
+
+			</div>
+
+
+		</div>
+
+	</section>
+
+
+	<!-- ================= PROJECTS ================= -->
+
+	<section id="projects">
+
+		<div class="section-title">
+
+			<h2>
+				My Projects
+			</h2>
+
+			<p>
+				Some of the projects I have worked on
+			</p>
+
+		</div>
+
+
+		<div class="projects-grid">
+
+
+			<!-- PROJECT 1 -->
+
+			<div class="project-card">
+
+				<img src="Screenshot (179).png"
+					alt="The Path of Redemption"
+					onclick="openImage(this.src, this.alt)">
+
+
+				<div class="project-content">
+
+					<h3>
+						The Path of Redemption
+					</h3>
+
+					<p>
+						A 2D turn-based RPG developed as my capstone project.
+						The game features morality-based decisions,
+						turn-based battles, and multiple endings based
+						on the player's choices.
+					</p>
+
+					<div class="tech">
+
+						<span>Unity</span>
+						<span>C#</span>
+						<span>2D RPG</span>
+						<span>Mobile</span>
+
+					</div>
+
+					<p class="image-hint">
+						🖼️ Click the image to enlarge
+					</p>
+
+				</div>
+
+			</div>
+
+
+			<!-- PROJECT 2 -->
+
+			<div class="project-card">
+
+				<img src="Screenshot (70).png"
+					alt="Time Tracking System"
+					onclick="openImage(this.src, this.alt)">
+
+
+				<div class="project-content">
+
+					<h3>
+						Time Tracking System
+					</h3>
+
+					<p>
+						A time tracking application developed during my
+						On-the-Job Training. The system was designed to
+						record and manage OJT time-in and time-out
+						information, helping organize attendance records
+						more efficiently.
+					</p>
+
+					<div class="tech">
+
+						<span>Flutter</span>
+						<span>Dart</span>
+						<span>Web & Mobile App</span>
+						<span>Time Tracking</span>
+
+					</div>
+
+					<p class="image-hint">
+						🖼️ Click the image to enlarge
+					</p>
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</section>
+
+
+	<!-- ================= EXPERIENCE ================= -->
+
+	<section id="experience">
+
+		<div class="section-title">
+
+			<h2>
+				OJT Experience
+			</h2>
+
+			<p>
+				My practical IT experience
+			</p>
+
+		</div>
+
+
+		<div class="experience">
+
+			<h3>
+				On-the-Job Training
+			</h3>
+
+			<h4>
+				DENR PENRO Aklan - Planning Section ICT Unit
+			</h4>
+
+
+			<ul>
+
+				<li>
+					Troubleshot and repaired computer and printer issues.
+				</li>
+
+				<li>
+					Installed operating systems and software on computers.
+				</li>
+
+				<li>
+					Performed disk cloning and SSD installation.
+				</li>
+
+				<li>
+					Assisted with printer and scanner setup.
+				</li>
+
+				<li>
+					Encoded databases and maintained records.
+				</li>
+
+				<li>
+					Prepared and printed identification cards and certificates.
+				</li>
+
+				<li>
+					Assisted in setting up computers, projectors,
+					and other equipment for workshops.
+				</li>
+
+				<li>
+					Performed computer cleaning and basic hardware maintenance.
+				</li>
+
+			</ul>
+
+
+			<h3 style="margin-top: 30px;">
+				OJT Completion
+			</h3>
+
+			<p style="color: #cbd5e1; margin-top: 5px;">
+				Successfully completed my On-the-Job Training program
+				at DENR PENRO Aklan.
+			</p>
+
+
+			<img src="received_989541190162424.jpeg"
+				alt="OJT Completion Certificate"
+				onclick="openImage(this.src, this.alt)">
+
+		</div>
+
+	</section>
+
+
+	<!-- ================= OJT PHOTO GALLERY ================= -->
+
+	<div class="ojt-gallery">
+
+		<h3>
+			OJT Activities & Experiences
+		</h3>
+
+
+		<div class="gallery-grid">
+
+
+			<!-- PHOTO 1 -->
+
+			<div class="gallery-item">
+
+				<img src="Picture1.jpg"
+					alt="Developing a Time Tracking System"
+					onclick="openImage(this.src, this.alt)">
+
+				<div class="gallery-caption">
+					Developing a Time Tracking System
+				</div>
+
+			</div>
+
+
+			<!-- PHOTO 2 -->
+
+			<div class="gallery-item">
+
+				<img src="IMG_20260407_171824_107.jpg"
+					alt="Printer Troubleshooting"
+					onclick="openImage(this.src, this.alt)">
+
+				<div class="gallery-caption">
+					Printer Troubleshooting
+				</div>
+
+			</div>
+
+
+			<!-- PHOTO 3 -->
+
+			<div class="gallery-item">
+
+				<img src="IMG_20260127_133204_569.jpg"
+					alt="Editing ID for OJT"
+					onclick="openImage(this.src, this.alt)">
+
+				<div class="gallery-caption">
+					Editing ID for OJT
+				</div>
+
+			</div>
+
+
+			<!-- PHOTO 4 -->
+
+			<div class="gallery-item">
+
+				<img src="IMG_20260126_125001_065.jpg"
+					alt="Disk Cloning"
+					onclick="openImage(this.src, this.alt)">
+
+				<div class="gallery-caption">
+					Disk Cloning
+				</div>
+
+			</div>
+
+
+			<!-- PHOTO 5 -->
+
+			<div class="gallery-item">
+
+				<img src="Picture2.jpg"
+					alt="Starlink Setup"
+					onclick="openImage(this.src, this.alt)">
+
+				<div class="gallery-caption">
+					Starlink Setup
+				</div>
+
+			</div>
+
+
+			<!-- PHOTO 6 -->
+
+			<div class="gallery-item">
+
+				<img src="IMG_20260408_091907_451.jpg"
+					alt="Computer Repair and Maintenance"
+					onclick="openImage(this.src, this.alt)">
+
+				<div class="gallery-caption">
+					Computer Repair & Maintenance
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+	<!-- ================= CONTACT ================= -->
+
+	<section id="contact">
+
+		<div class="section-title">
+
+			<h2>
+				Contact Me
+			</h2>
+
+			<p>
+				Let's connect and talk about opportunities
+			</p>
+
+		</div>
+
+
+		<div class="contact-box">
+
+			<p>
+				📧 Email:
+
+				<a href="mailto:reinantenazas7@gmail.com">
+					reinantenazas7@gmail.com
+				</a>
+			</p>
+
+
+			<p>
+				📱 Phone:
+				09561341321
+			</p>
+
+
+			<p>
+				📍 Location:
+				Makato, Aklan, Philippines
+			</p>
+
+
+			<p>
+				💼 LinkedIn:
+
+				<a href="https://www.linkedin.com/in/reinan-joseph-tenazas-6018a3387"
+					target="_blank">
+
+					linkedin.com/in/reinan-joseph-tenazas-6018a3387
+
+				</a>
+
+			</p>
+
+		</div>
+
+	</section>
+
+
+	<!-- ================= IMAGE VIEWER ================= -->
+
+	<div id="imageViewer"
+		class="image-viewer"
+		onclick="closeImage()">
+
+
+		<span class="close-image"
+			onclick="closeImage()">
+
+			&times;
+
+		</span>
+
+
+		<img id="largeImage"
+			src=""
+			alt="Enlarged Image"
+			onclick="event.stopPropagation()">
+
+
+		<div id="viewerText"
+			class="viewer-text">
+
+		</div>
+
+
+	</div>
+
+
+	<!-- ================= FOOTER ================= -->
+
+	<footer>
+
+		<p>
+			© 2026 Reinan Joseph T. Tenazas.
+			All Rights Reserved.
+		</p>
+
+	</footer>
+
+
+	<!-- ================= JAVASCRIPT ================= -->
+
+	<script>
+
+		function openImage(imageSrc, imageAlt) {
+
+			document.getElementById("imageViewer").style.display = "flex";
+
+			document.getElementById("largeImage").src = imageSrc;
+
+			document.getElementById("largeImage").alt = imageAlt;
+
+			document.getElementById("viewerText").textContent =
+				imageAlt;
+
+			document.body.style.overflow = "hidden";
+
+		}
+
+
+		function closeImage() {
+
+			document.getElementById("imageViewer").style.display = "none";
+
+			document.getElementById("largeImage").src = "";
+
+			document.body.style.overflow = "auto";
+
+		}
+
+
+		/* Close viewer with ESC key */
+
+		document.addEventListener("keydown", function(event) {
+
+			if (event.key === "Escape") {
+
+				closeImage();
+
+			}
+
+		});
+
+	</script>
+
+
+</body>
+
+</html>
